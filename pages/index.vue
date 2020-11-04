@@ -144,6 +144,7 @@ export default {
             "first_name": firstname.substring(0, firstname.indexOf(' ')),
             "last_name": firstname.substring(firstname.indexOf(' ')+1)
           })
+          alert('sukses')
         this.data_edit = '' 
       }
     },
@@ -152,6 +153,7 @@ export default {
     },
     async delete_data(o){ 
       const response = await this.$axios.$delete(`users/${o.id}`)
+      alert('delete sukses')
     },
     async add_data(){
       const data = this.add
@@ -164,6 +166,10 @@ export default {
             "first_name": data.add_firstname,
             "last_name": data.add_lastname
           })
+          data.add_firstname = ''
+          data.add_email = ''
+          data.add_lastname = ''
+          alert('sukses')
         } else {
           alert('email salah')
         }
