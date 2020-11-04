@@ -135,7 +135,7 @@ export default {
     async save(e){
       const firstname = this.dataa.name
       if (!this.dataa.email.includes('@')) { 
-        alert('email harus pake @')       
+        alert('email salah')       
         } else if (firstname == '') {
         alert('nama kosong')       
         }  else {
@@ -165,7 +165,7 @@ export default {
             "last_name": data.add_lastname
           })
         } else {
-          alert('email harus pake @')
+          alert('email salah')
         }
       } else {
         alert('input tidak boleh kosong')
